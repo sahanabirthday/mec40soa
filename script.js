@@ -11,7 +11,7 @@ const app = new Vue({
   data: () => ({
     letters: Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ'),
     quotes: [], //Filled by the mounted hook
-    currentQuote: '', //Filled by the mounted hook
+      currentQuote: '', //Filled by the mounted hook
     quoteAuthor: '',
     guesses: [],
     strikes: [...defaultStrikes],
@@ -94,7 +94,8 @@ const app = new Vue({
       } else if (this.strikeout) {
         return '❌ You lost this round. Try again?';
       } else if (this.puzzleComplete) {
-        return '🎉 You win!';
+          window.location.href = "final.html";
+          return '🎉 You win!';
       }
       //You can never be too safe ¯\_(ツ)_/¯
       return '😬 Unforeseen error state, maybe try a new game?';
