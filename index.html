@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday!!!!</title>
+  <title>Happy Birthday Sahana!!!!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
@@ -14,13 +14,14 @@
 <!-- partial:index.partial.html -->
 <main id="app" @keyup="handleKeyPress">
 	<div class="container">
+        <p style="color:black;font-size:13px;">Very impressive Sahana...but you're not done yet</p>
 		<p id="quote" :class="{ 'strike': strikeout, 'highlight': puzzleComplete }">
 			<span v-for="word in splitQuote">
 				<template v-for="letter in word">{{ isRevealed(letter) }}</template>
 			</span>
-			<small v-if="gameOver">
-				—{{ quoteAuthor }}
-			</small>
+            <small v-if="gameOver">
+                —{{ quoteAuthor.slice(0, -10) }}
+            </small>
 		</p>
 
 		<div class="status">
