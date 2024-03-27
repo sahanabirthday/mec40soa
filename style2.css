@@ -2513,7 +2513,7 @@ p.newspaper-weather-cities-cold {
       display: -ms-grid;
       display: grid;
       /*-ms-grid-columns: (1fr)[4];*/
-          grid-template-columns: repeat(4, 1fr);
+         /* grid-template-columns: repeat(4, 1fr);*/
       grid-column-gap: 1em;
       grid-row-gap: 0;
     }
